@@ -52,21 +52,25 @@ const projects = [
 
 export default function Project() {
   return (
-    <div className="w-screen h-screen grid grid-cols-3">
+    <ul
+      id="project"
+      className="w-screen h-screen grid grid-cols-3 gap-4 p-4 bg-[#2d3134]">
       {projects.map((project) => {
         return (
-          <div
+          <li
             key={project.id}
             style={{ backgroundImage: `url(${project.src})` }}
-            className={`bg-cover bg-center`}>
+            className="card bg-cover rounded-xl">
             <a
               href={project.href}
-              className="bg-white/25 opacity-0 backdrop-blur hover:opacity-100 w-full h-full transition flex justify-center items-center text-xl cursor-pointer">
-              {project.name}
+              className="background bg-[#2d3134]/80 backdrop-blur w-full h-full transition flex justify-center items-center text-xl cursor-pointer rounded-xl relative opacity-0 hover:opacity-100">
+              <div className="title absolute top-0 left-1/2 translate-x-[-50%] text-white font-mono transition-all ease-out w-full text-center cursor-pointer">
+                {project.name}
+              </div>
             </a>
-          </div>
+          </li>
         );
       })}
-    </div>
+    </ul>
   );
 }
