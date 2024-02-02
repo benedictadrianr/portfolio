@@ -1,7 +1,7 @@
 import undangan from "../img/undangan-pernikahan-digital.png";
 import netflix from "../img/netflix.jpg";
 import bmi from "../img/bmi.jpg";
-import regis from "../img/regis.jpg";
+import mushroom from "../img/mushroom.png";
 import tribute from "../img/tribute.jpg";
 import landingpage from "../img/landingpage.jpg";
 
@@ -29,10 +29,10 @@ const projects = [
   },
   {
     id: 4,
-    name: "Registration Form",
-    href: "https://rianrich123.github.io/regis/",
-    src: regis,
-    alt: "regis",
+    name: "Mushroom Gaming Demo Site",
+    href: "https://rianrich123.github.io/mushroom-gaming",
+    src: mushroom,
+    alt: "mushroom",
   },
   {
     id: 5,
@@ -63,6 +63,8 @@ export default function Project() {
             className="card bg-cover rounded-xl">
             <a
               href={project.href}
+              target="_blank"
+              rel="noreferrer"
               className="background bg-[#2d3134]/80 backdrop-blur w-full h-full transition flex justify-center items-center text-xl cursor-pointer rounded-xl relative opacity-0 hover:opacity-100">
               <div className="title absolute top-0 left-1/2 translate-x-[-50%] text-white font-mono transition-all ease-out w-full text-center cursor-pointer">
                 {project.name}
