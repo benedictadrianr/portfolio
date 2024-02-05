@@ -15,10 +15,10 @@ const projects = [
   },
   {
     id: 2,
-    name: "Netflix Landing Page Clone",
-    href: "https://benedictadrianr.github.io/netflixlandpage/",
+    name: "Nflix Landing Page",
+    href: "https://benedictadrianr.github.io/nflixlandpage/",
     src: netflix,
-    alt: "netflix",
+    alt: "nflix",
   },
   {
     id: 3,
