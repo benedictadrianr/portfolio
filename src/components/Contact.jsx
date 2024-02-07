@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="bg-[#2d3134] w-screen h-32 flex justify-center items-center flex-col gap-2">
+      className="bg-[#0D1013] w-screen h-32 flex justify-center items-center flex-col gap-2">
       <h1 className="font-mono text-white">Here&apos;s my Contacts!</h1>
       <ul className="flex flex-row gap-2">
         <li>

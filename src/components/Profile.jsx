@@ -56,24 +56,28 @@ export default function Profile() {
     <>
       <div
         id="profile"
-        className="bg-[url('img/background.jpg')] w-screen h-screen bg-cover flex flex-row">
-        <div className="w-1/2 h-screen flex flex-col justify-center items-center text-right text-white gap-2 font-mono">
-          <h1 className="w-11/12 text-5xl">Hi, I&apos;m Ben</h1>
-          <p className="w-11/12 text-xl">
+        className="bg-gradient-to-b from-[#171D25] to-[#0D1013] w-screen h-screen -z-50 flex flex-col justify-center items-center relative gap-4">
+        <div className="absolute w-[346px] h-[346px] rounded-full border-[#00F7FF] border-[19px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-xl -z-40"></div>
+        <div className="absolute w-[270px] h-[270px] rounded-full bg-[#00F7FF] -bottom-[6rem] left-0 -translate-x-1/2 -translate-y-1/2 blur-2xl -z-40"></div>
+        <div className="w-1/2 flex flex-col justify-center items-center text-center text-white gap-2 font-mono">
+          <h1 className="w-11/12 text-[32px]">Hi 👋, I&apos;m Ben</h1>
+          {/* <p className="w-11/12 text-xl">
             I&apos;m an aspiring frontend developer
             <br /> who&apos;s looking for a job in the frontend area <br />
             to the right is my skills and proficiency <br />
             check out some of my projects below
-          </p>
+          </p> */}
         </div>
-        <div className="w-1/2 h-screen flex justify-centern items-center">
-          <ul className="flex gap-2 flex-wrap w-80">
+        <div className="flex justify-centern items-center">
+          <ul className="flex gap-2">
             {list.map((skill) => {
               return (
                 <li
-                  className="w-24 h-24 rounded-lg border-2 border-black bg-white/5 p-2 flex items-center justify-center"
+                  className="w-[68px] h-[68px] text-white text-[10px] rounded-[16px] bg-[#171D25] p-2 flex items-center justify-center font-mono flex-col gap-1"
+                  style={{ boxShadow: "inset 0 -2px 3px 0 #178F98" }}
                   key={skill.id}>
-                  <img src={skill.href} alt={skill.alt} />
+                  <img className="h-[35px]" src={skill.href} alt={skill.alt} />
+                  <p>{skill.name}</p>
                 </li>
               );
             })}

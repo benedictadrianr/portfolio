@@ -4,13 +4,20 @@ import bmi from "../img/bmi.jpg";
 import mushroom from "../img/mushroom.png";
 import tribute from "../img/tribute.jpg";
 import landingpage from "../img/landingpage.jpg";
+import ring from "../img/ring.png";
+import nflixLogo from "../img/nflixLogo.png";
+import calculator from "../img/calculator.png";
+import console from "../img/console.png";
+import profile from "../img/profile.png";
+import musicNote from "../img/musicNote.png";
 
 const projects = [
   {
     id: 1,
-    name: "Undangan Pernikahan Digital",
+    name: "Wedding Invitation",
     href: "https://benedictadrianr.github.io/Undangan-Pernikahan-Digital/",
     src: undangan,
+    logoSrc: ring,
     alt: "undangan",
   },
   {
@@ -18,6 +25,7 @@ const projects = [
     name: "Nflix Landing Page",
     href: "https://benedictadrianr.github.io/nflixlandpage/",
     src: netflix,
+    logoSrc: nflixLogo,
     alt: "nflix",
   },
   {
@@ -25,27 +33,31 @@ const projects = [
     name: "Body Mass Index Calculator",
     href: "https://revou-fundamental-course.github.io/10-jul-23-rianrich123/",
     src: bmi,
+    logoSrc: calculator,
     alt: "bmi",
   },
   {
     id: 4,
-    name: "Mushroom Gaming Demo Site",
+    name: "Gameshop Website",
     href: "https://benedictadrianr.github.io/mushroom-gaming",
     src: mushroom,
+    logoSrc: console,
     alt: "mushroom",
   },
   {
     id: 5,
-    name: "Stephen King's Tribute Page",
+    name: "Biography",
     href: "https://benedictadrianr.github.io/stephen-king-tribute-page/",
     src: tribute,
+    logoSrc: profile,
     alt: "tribute",
   },
   {
     id: 6,
-    name: "Original Trombones Landing Page",
+    name: "Trombone Landing Page",
     href: "https://benedictadrianr.github.io/product-landing-page/",
     src: landingpage,
+    logoSrc: musicNote,
     alt: "landingpage",
   },
 ];
@@ -54,19 +66,23 @@ export default function Project() {
   return (
     <ul
       id="project"
-      className="w-screen h-screen grid grid-cols-3 gap-4 p-4 bg-[#2d3134]">
+      className="w-screen h-screen grid grid-cols-3 gap-1 bg-[#0D1013] -z-50">
       {projects.map((project) => {
         return (
           <li
             key={project.id}
             style={{ backgroundImage: `url(${project.src})` }}
-            className="card bg-cover rounded-xl">
+            className="card bg-cover rounded-[20px]">
             <a
               href={project.href}
               target="_blank"
               rel="noreferrer"
-              className="background bg-[#2d3134]/80 backdrop-blur w-full h-full transition flex justify-center items-center text-xl cursor-pointer rounded-xl relative opacity-0 hover:opacity-100">
-              <div className="title absolute top-0 left-1/2 translate-x-[-50%] text-white font-mono transition-all ease-out w-full text-center cursor-pointer">
+              style={{ boxShadow: "inset 0 -70px 12px 0 #00000080" }}
+              className="background bg-[#171D25]/65 w-full h-full transition flex justify-center items-center text-xl cursor-pointer rounded-xl relative">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40 logo transition-all">
+                <img src={project.logoSrc} className="h-20" alt="" />
+              </div>
+              <div className="title absolute bottom-4 left-1/2 translate-x-[-50%] text-white/40 font-mono transition-all ease-out w-full text-center cursor-pointer">
                 {project.name}
               </div>
             </a>

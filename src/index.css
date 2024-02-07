@@ -3,5 +3,15 @@
 @tailwind utilities;
 
 .background:hover > .title {
-  top: 30%;
+  color: white;
+  scale: 1.01;
+}
+
+.background:hover > .logo {
+  opacity: 1;
+  scale: 1.05;
+}
+
+.card:hover {
+  scale: 0.99;
 }
