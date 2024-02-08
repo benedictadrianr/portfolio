@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow-x: hidden;
+}
+
 .background:hover > .title {
   color: white;
   scale: 1.01;
@@ -14,4 +18,61 @@
 
 .card:hover {
   scale: 0.99;
+}
+
+.profile-name {
+  animation: infinite;
+  animation: slide 5s ease-in-out infinite forwards;
+  animation-play-state: running;
+}
+
+@keyframes slide {
+  /* BEN */
+  0% {
+    top: 0px;
+  }
+  10% {
+    top: 0px;
+  }
+
+  /* RIAN */
+  24% {
+    top: -47px;
+  }
+  25% {
+    top: -46px;
+  }
+  35% {
+    top: -46px;
+  }
+
+  /* ADRIAN */
+  49% {
+    top: -96px;
+  }
+  50% {
+    top: -95px;
+  }
+  60% {
+    top: -95px;
+  }
+
+  /* back to RIAN */
+  74% {
+    top: -45px;
+  }
+  75% {
+    top: -46px;
+  }
+  85% {
+    top: -46px;
+  }
+
+  /* back to BEN */
+  99% {
+    top: 1px;
+  }
+  100% {
+    top: 0px;
+  }
 }
