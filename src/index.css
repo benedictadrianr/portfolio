@@ -16,12 +16,16 @@ html {
   scale: 1.05;
 }
 
+.card {
+  background-size: 105%;
+}
+
 .card:hover {
-  scale: 0.99;
+  background-size: 100%;
+  background-position: center;
 }
 
 .profile-name {
-  animation: infinite;
   animation: slide 5s ease-in-out infinite forwards;
   animation-play-state: running;
 }

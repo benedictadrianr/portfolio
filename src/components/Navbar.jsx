@@ -1,7 +1,7 @@
 export default function Navbar() {
   return (
-    <nav className="bg-black/50 w-screen h-20 flex justify-between py-6 px-12 fixed top-0 backdrop-blur z-50">
-      <div className="">Logo</div>
+    <nav className="bg-black/50 w-screen h-20 flex justify-between py-6 px-6 sm:px-12 fixed top-0 backdrop-blur z-50">
+      <div className="mr-6">Logo</div>
       <div className="w-full max-w-xs">
         <ul className="flex flex-row justify-between text-white font-mono">
           <li>

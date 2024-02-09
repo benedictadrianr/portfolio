@@ -66,13 +66,13 @@ export default function Project() {
   return (
     <ul
       id="project"
-      className="w-screen h-screen grid grid-cols-3 gap-1 bg-[#0D1013] -z-50">
+      className="w-screen min-h-screen grid grid-cols-1 gap-1 bg-[#0D1013] -z-50 md:grid-cols-2 xl:grid-cols-3">
       {projects.map((project) => {
         return (
           <li
             key={project.id}
             style={{ backgroundImage: `url(${project.src})` }}
-            className="card bg-cover rounded-[20px]">
+            className="card bg-center bg-cover rounded-[20px] transition-all min-h-[200px]">
             <a
               href={project.href}
               target="_blank"
@@ -80,9 +80,13 @@ export default function Project() {
               style={{ boxShadow: "inset 0 -70px 12px 0 #00000080" }}
               className="background bg-[#171D25]/65 w-full h-full transition flex justify-center items-center text-xl cursor-pointer rounded-xl relative">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40 logo transition-all">
-                <img src={project.logoSrc} className="h-20" alt="" />
+                <img
+                  src={project.logoSrc}
+                  className="h-[80px]"
+                  alt="project logo"
+                />
               </div>
-              <div className="title absolute bottom-4 left-1/2 translate-x-[-50%] text-white/40 font-mono transition-all ease-out w-full text-center cursor-pointer">
+              <div className="title absolute bottom-4 left-1/2 -translate-x-1/2 text-white/40 font-mono transition-all w-full text-center">
                 {project.name}
               </div>
             </a>
